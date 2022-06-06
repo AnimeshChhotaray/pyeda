@@ -42,6 +42,11 @@ visit PyEDA's page at the
 
 Installation
 ============
+My notes (while working on a Mac):
+- Install conda and create a conda environment 
+- Install all conda packages (that you need for your project) first and then pip packages
+- Conda packages that you will need for BDD visualization: python-graphviz, pydot
+- pip install pyeda (Other packages that you might want to install using pip (if you have not installed them before): ipython, jupyterlab)
 
 Latest release version using
 `pip <http://www.pip-installer.org/en/latest>`_::
@@ -100,6 +105,15 @@ Construct Boolean functions using standard function syntax::
    >>> f15 = ITE(a, b, c)
    >>> f16 = Nor(a, b, c)
    >>> f17 = Nand(a, b, c)
+
+My notes on rendering BDD in a pdf (https://stackoverflow.com/questions/33229005/how-to-use-pyeda-to-visualize-bdds-probably-very-simple):
+>>> from pyeda.inter import *
+>>> from graphviz import Source
+>>> a, b, c = map(bddvar, 'abc')
+>>> f = a & b | a & c | b & c
+>>> gv = Source(f.to_dot())
+>>> gv.render('render_pdf_name',view=True)
+
 
 Construct Boolean functions using higher order operators::
 
