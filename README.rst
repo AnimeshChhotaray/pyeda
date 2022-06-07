@@ -44,7 +44,7 @@ Installation
 ============
 My notes (while working on a Mac):
 - Install conda and create a conda environment 
-- Install all conda packages (that you need for your project) first and then pip packages
+- Install all conda packages (that you need for your project) first and then pip packages. Use Python v3.3-3.9. In Python v10, `X = ttvars('x', 4)`, will give error as Sequence has moved from package collections to collections.abc https://stackoverflow.com/questions/69596494/unable-to-import-freegames-python-package-attributeerror-module-collections
 - Conda packages that you will need for BDD visualization: python-graphviz, pydot
 - pip install pyeda (Other packages that you might want to install using pip (if you have not installed them before): ipython, jupyterlab)
 
